@@ -1,0 +1,91 @@
+body { 
+  background: #268726;
+}
+.c-bmi {
+  color: #fff;
+}
+
+.c-bmi__class.active {
+  width: 25%;
+  border: 5px solid #FFFFFF;
+  opacity: 1;
+}
+
+.c-bmi__metric-caption {
+  background: #175117;
+  height: 48px;
+  border: 1px solid #ffffff;
+  border-right: 0;
+}
+.c-bmi__btn {
+  outline: none;
+}
+.c-bmi__btn:last-child {
+  border-left: none;
+}
+.c-bmi__btn:hover{
+
+}
+.c-bmi__btn--active {
+  background: #175117;
+  border: 1px solid #175117;
+}
+.c-bmi__btn--active:hover {
+
+}
+
+.c-bmi__changer {
+  width: 30px;
+  cursor: pointer;
+  height: 48px;
+}
+
+.c-bmi input, .c-bmi__result {
+  height: 48px;
+  text-align: right;
+}
+
+.c-bmi__inc {
+  background: #175117;
+  border: 1px solid #fff;
+  padding: 0px 2px;
+  width: auto;
+  height: 24px;
+  width: 28px;
+  line-height: 19px;
+  vertical-align: top;
+  outline: none;
+}
+
+.c-bmi__copy {
+  background: #175117;
+  border: 1px solid #fff;
+  width: 30px;
+  cursor: pointer;
+  height: 48px;
+}
+.c-bmi__copy img {
+  transform: scale(2);
+  -webkit-trransform: scale(2);
+  -moz-transform: scale(2);
+  margin-top: 15px;
+} 
+
+button:focus {
+  outline: none !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media (min-width: 768px) {
+  .c-bmi__class.active {
+    width: 20%;
+  }
+}
