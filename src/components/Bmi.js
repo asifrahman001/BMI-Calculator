@@ -6,12 +6,13 @@ import selectText from '../helpers/select_text';
 class Bmi extends PureComponent {
   constructor(props) {
     super(props);
+    let bmi_result = bmiCalculation(70, 60, 'metric');
     this.state = {
       calcultation_type: 'metric',
-      bmi_result: '',
-      bmi_class: '',
-      weight_value: '',
-      height_value: ''
+      bmi_result: bmi_result.bmi,
+      bmi_class: bmi_result.class,
+      weight_value: '70',
+      height_value: '60'
     }
     this.metric_unit_map = {
       'metric': {
@@ -19,18 +20,18 @@ class Bmi extends PureComponent {
         'weight': 'kg'
       },
       'imperial': {
-        'height': 'ft',
+        'height': 'inches',
         'weight': 'lb'
       }
     }
-    this.active_button_class = 'c-bmi__btn--active text-white py-2 px-4';
-    this.button_class = 'c-bmi__btn bg-transparent py-2 px-4 border';
+    this.active_button_class = 'c-bmi__btn c-bmi__btn--active text-white py-2 px-4';
+    this.button_class = 'c-bmi__btn c-bmi__btn--transparent bg-transparent py-2 px-4 border';
 
   }
   toggleMetric = (calcultation_type) => {
     this.setState({
       calcultation_type
-    });
+    }, this.calculateBmi);
   }
   calculateBmi = () => {
     let bmi_result = {
@@ -78,7 +79,7 @@ class Bmi extends PureComponent {
   render() {
     return (
       <div className="c-bmi mb-10">
-        <h3 className="text-4xl p-4 mb-5 border-b bg-white text-black">BMI(Body Mass Index) Calculator </h3>
+        <h3 className="text-2xl p-2 mb-5 border-b bg-white text-black">BMI(Body Mass Index) Calculator </h3>
         <div className="mb-5">
           <button onClick={this.toggleMetric.bind(null, 'metric')} className={this.state.calcultation_type === 'metric' ? this.active_button_class : this.button_class}>
             Metric
@@ -88,7 +89,7 @@ class Bmi extends PureComponent {
           </button>
         </div>
         <div className="mb-5">
-          <button onClick={this.clearAll} className={this.active_button_class}>
+          <button onClick={this.clearAll} className={`b-r-10 c-bmi__btn--active text-white py-2 px-4`}>
             Clear All
           </button>
         </div>

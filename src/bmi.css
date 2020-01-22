@@ -16,20 +16,31 @@ body {
   height: 48px;
   border: 1px solid #ffffff;
   border-right: 0;
+  border-radius: 10px 0px 0px 10px;
 }
-.c-bmi__btn {
+.c-bmi__btn--transparent {
   outline: none;
 }
-.c-bmi__btn:last-child {
+.c-bmi__btn--transparent:last-child {
   border-left: none;
-}
-.c-bmi__btn:hover{
-
 }
 .c-bmi__btn--active {
   background: #175117;
   border: 1px solid #175117;
 }
+
+.c-bmi__btn {
+  width: 100px;
+}
+
+.c-bmi__btn:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.c-bmi__btn:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+
 .c-bmi__btn--active:hover {
 
 }
@@ -57,12 +68,21 @@ body {
   outline: none;
 }
 
+.c-bmi__inc:first-child {
+  border-top-right-radius: 10px;
+}
+
+.c-bmi__inc:last-child {
+  border-bottom-right-radius: 10px;
+}
+
 .c-bmi__copy {
   background: #175117;
   border: 1px solid #fff;
   width: 30px;
   cursor: pointer;
   height: 48px;
+  border-radius: 0 10px 10px 0;
 }
 .c-bmi__copy img {
   transform: scale(2);
@@ -82,6 +102,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+.b-r-10 {
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
