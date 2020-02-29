@@ -125,16 +125,16 @@ class Bmi extends PureComponent {
               </div>
               <div id="bmiResult" className="c-bmi__result text-green-900 inline-block w-1/2 bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2">{this.state.bmi_result}</div>
               <div onClick={this.copyText} className="align-top inline-block c-bmi__copy">
-                <img className="pl-2 pr-2" src="/copy.png" />
+                <img className="pl-2 pr-2" src="/BMI-Calculator/copy.png" />
               </div>
             </div>
           </div>
         </div>
         <div className="mt-10">
-          <img className={`${this.state.bmi_class === 'under' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Underweight.png" />
-          <img className={`${this.state.bmi_class === 'normal' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Normal.png" />
-          <img className={`${this.state.bmi_class === 'over' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Overweight.png" />
-          <img className={`${this.state.bmi_class === 'obese' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Obese.png" />
+          <img className={`${this.state.bmi_class === 'under' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Calculator/BMI-Underweight.png" />
+          <img className={`${this.state.bmi_class === 'normal' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Calculator/BMI-Normal.png" />
+          <img className={`${this.state.bmi_class === 'over' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Calculator/BMI-Overweight.png" />
+          <img className={`${this.state.bmi_class === 'obese' ? 'active' : ''} inline-block w-1/5 opacity-50 c-bmi__class md:w-2/12`} src="/BMI-Calculator/BMI-Obese.png" />
         </div>
       </div>
     )
